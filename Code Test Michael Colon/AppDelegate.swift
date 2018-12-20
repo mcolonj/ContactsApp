@@ -16,7 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         // Override point for customization after application launch.
+        
+        if DataStoreHelper.thisDeviceHasSignedOwner() == true {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let navigationController: UINavigationController = storyboard.instantiateViewController(withIdentifier: "navigationController") as? UINavigationController else { return true }
+            guard let vc: ContactsTableViewController = storyboard.instantiateViewController(withIdentifier: "contactsViewController") as? ContactsTableViewController else { return true }
+            navigationController.viewControllers = [vc]
+            if let window = window {
+                window.rootViewController = navigationController
+            }
+        }
+        // Delete some stuff
+//        DataStoreHelper.shared.deleteObjects(DataStoreHelper.allContacts())
+//        DataStoreHelper.shared.deleteObjects(DataStoreHelper.allObjects(named: "Person"))
+//        DataStoreHelper.shared.saveManagedObjects()
         return true
     }
 

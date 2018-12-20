@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="KeepCalm-Medium.ttf">
+            <string>KeepCalm-Medium</string>
+        </array>
+        <array key="Roboto-Thin.ttf">
+            <string>Roboto-Thin</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ContactCell" customModule="Code_Test_Michael_Colon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Michael Colon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTp-98-OLd">
+                    <rect key="frame" x="32" y="32" width="311" height="21"/>
+                    <fontDescription key="fontDescription" name="KeepCalm-Medium" family="Keep Calm" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="michael.colon.sjdkslskd@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2K-lv-kGv">
+                    <rect key="frame" x="32" y="63" width="303" height="20"/>
+                    <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXg-0t-faM">
+                    <rect key="frame" x="233" y="0.0" width="110" height="30"/>
+                    <state key="normal" title="(610) 777-4536"/>
+                    <connections>
+                        <action selector="makeCall:" destination="iN0-l3-epB" eventType="touchUpInside" id="jAg-1m-8qf"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08/03/1984" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuG-hR-P0q">
+                    <rect key="frame" x="255.5" y="90" width="87.5" height="20"/>
+                    <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="U2K-lv-kGv" firstAttribute="top" secondItem="zTp-98-OLd" secondAttribute="bottom" constant="10" id="19H-l4-PVx"/>
+                <constraint firstItem="U2K-lv-kGv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="9Dy-oc-hIe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="zTp-98-OLd" secondAttribute="trailing" constant="32" id="KZN-hr-FZj"/>
+                <constraint firstItem="zTp-98-OLd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="aCh-ii-cO1"/>
+                <constraint firstItem="GXg-0t-faM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="baA-CO-G6Q"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xuG-hR-P0q" secondAttribute="bottom" constant="10" id="dYC-gz-giL"/>
+                <constraint firstItem="zTp-98-OLd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="32" id="kK2-Kp-dKf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="U2K-lv-kGv" secondAttribute="trailing" constant="40" id="qeh-vg-eSO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xuG-hR-P0q" secondAttribute="trailing" constant="32" id="rye-PU-F3b"/>
+                <constraint firstItem="GXg-0t-faM" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-32" id="xIh-lE-tp2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="callThisPerson" destination="GXg-0t-faM" id="f1W-GL-OvD"/>
+                <outlet property="dob" destination="xuG-hR-P0q" id="Rcs-Ac-hha"/>
+                <outlet property="email" destination="U2K-lv-kGv" id="Wvu-gb-fvu"/>
+                <outlet property="name" destination="zTp-98-OLd" id="OaZ-la-Z3S"/>
+            </connections>
+            <point key="canvasLocation" x="29.600000000000001" y="81.859070464767626"/>
+        </view>
+    </objects>
+</document>

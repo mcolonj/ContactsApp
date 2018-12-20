@@ -16,6 +16,17 @@
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>big_noodle_titling</string>
+		<string>GeosansLight</string>
+		<string>KeepCalm-Medium</string>
+		<string>coolvetica rg</string>
+		<string>Roboto-Light</string>
+		<string>Roboto-Medium</string>
+		<string>Roboto-Regular</string>
+		<string>Roboto-Thin</string>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 </dict>

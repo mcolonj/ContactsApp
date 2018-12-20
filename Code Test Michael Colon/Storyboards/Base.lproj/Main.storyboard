@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="o6G-fQ-KzD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="KeepCalm-Medium.ttf">
+            <string>KeepCalm-Medium</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Your Contacts-->
+        <scene sceneID="cJP-Dw-AUE">
+            <objects>
+                <tableViewController storyboardIdentifier="contactsViewController" title="Your Contacts" id="teh-xw-aTK" customClass="ContactsTableViewController" customModule="Code_Test_Michael_Colon" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Your Contacts" id="xH1-4V-NeV">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="6xM-Wx-Onk">
+                            <connections>
+                                <action selector="add:" destination="teh-xw-aTK" id="EZp-GN-Jtk"/>
+                                <segue destination="3oL-f8-U3V" kind="show" id="ftY-zI-sHI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="add" destination="6xM-Wx-Onk" id="WoA-NE-S2C"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I0C-fP-ecA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1193" y="944"/>
+        </scene>
+        <!--Navigator-->
+        <scene sceneID="1eW-Ea-odr">
+            <objects>
+                <navigationController storyboardIdentifier="navigationController" title="Navigator" id="o6G-fQ-KzD" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="fdx-dd-hHJ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.068722410119999994" blue="0.19433194779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4cV-3f-GVr" kind="relationship" relationship="rootViewController" id="Go5-bi-Ec2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WvF-7S-gTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="139"/>
+        </scene>
+        <!--Welcome-->
+        <scene sceneID="Eyo-zS-QAV">
+            <objects>
+                <viewController title="Welcome" id="4cV-3f-GVr" customClass="ViewController" customModule="Code_Test_Michael_Colon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YPT-ID-7SQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="Let's get started..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edJ-Yc-F6f">
+                                <rect key="frame" x="32" y="294.5" width="311" height="43.5"/>
+                                <fontDescription key="fontDescription" name="KeepCalm-Medium" family="Keep Calm" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="contactbook" translatesAutoresizingMaskIntoConstraints="NO" id="Bex-vH-022">
+                                <rect key="frame" x="0.0" y="51.5" width="375" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="b51-i7-efX"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ceh-pp-h1e">
+                                <rect key="frame" x="32" y="493" width="311" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1gR-q4-X6m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="23"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addMyNameWithSender:" destination="4cV-3f-GVr" eventType="touchUpInside" id="v1b-yI-nIy"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your first name...." textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="uJ8-Wj-tuX">
+                                <rect key="frame" x="32" y="339" width="311" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="sXl-JU-lI1"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="given-name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your last name...." textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UZw-sN-Mbw">
+                                <rect key="frame" x="32" y="406" width="311" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="hhb-8Q-nDl"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="family-name"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uJ8-Wj-tuX" secondAttribute="trailing" constant="32" id="5i7-aA-KwO"/>
+                            <constraint firstItem="uJ8-Wj-tuX" firstAttribute="leading" secondItem="YPT-ID-7SQ" secondAttribute="leading" constant="32" id="AfW-xA-giQ"/>
+                            <constraint firstItem="Ceh-pp-h1e" firstAttribute="leading" secondItem="YPT-ID-7SQ" secondAttribute="leading" constant="32" id="Epk-ub-eih"/>
+                            <constraint firstItem="Bex-vH-022" firstAttribute="bottom" secondItem="YPT-ID-7SQ" secondAttribute="centerY" constant="-50" id="Fx4-6m-pr2"/>
+                            <constraint firstAttribute="trailing" secondItem="Bex-vH-022" secondAttribute="trailing" id="Gfc-jJ-Ikk"/>
+                            <constraint firstAttribute="trailing" secondItem="UZw-sN-Mbw" secondAttribute="trailing" constant="32" id="N0b-x8-Jev"/>
+                            <constraint firstAttribute="trailing" secondItem="Ceh-pp-h1e" secondAttribute="trailing" constant="32" id="Ose-Em-RkA"/>
+                            <constraint firstItem="Ceh-pp-h1e" firstAttribute="top" secondItem="UZw-sN-Mbw" secondAttribute="bottom" constant="32" id="Plq-UY-dwg"/>
+                            <constraint firstAttribute="trailing" secondItem="edJ-Yc-F6f" secondAttribute="trailing" constant="32" id="SzT-dv-IGS"/>
+                            <constraint firstAttribute="bottom" secondItem="Ceh-pp-h1e" secondAttribute="bottom" constant="60" id="V1D-dH-VWB"/>
+                            <constraint firstItem="edJ-Yc-F6f" firstAttribute="top" secondItem="Bex-vH-022" secondAttribute="centerY" constant="143" id="b0k-zR-3Bk"/>
+                            <constraint firstItem="edJ-Yc-F6f" firstAttribute="leading" secondItem="YPT-ID-7SQ" secondAttribute="leading" constant="32" id="eWb-dN-BdU"/>
+                            <constraint firstItem="UZw-sN-Mbw" firstAttribute="leading" secondItem="YPT-ID-7SQ" secondAttribute="leading" constant="32" id="gBN-bg-L9i"/>
+                            <constraint firstItem="Bex-vH-022" firstAttribute="leading" secondItem="YPT-ID-7SQ" secondAttribute="leading" id="pbb-KH-c20"/>
+                            <constraint firstItem="UZw-sN-Mbw" firstAttribute="top" secondItem="uJ8-Wj-tuX" secondAttribute="bottom" constant="12" id="x6H-IH-HIt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="J9l-nA-B2L"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome" id="6uT-ze-TDe">
+                        <barButtonItem key="rightBarButtonItem" title="Skip" style="plain" id="57u-0P-ns9">
+                            <connections>
+                                <action selector="skipWelcome" destination="4cV-3f-GVr" id="x85-bc-MJp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="background" destination="Bex-vH-022" id="YTE-y9-2hD"/>
+                        <outlet property="firstName" destination="uJ8-Wj-tuX" id="kOQ-K5-P4j"/>
+                        <outlet property="lastName" destination="UZw-sN-Mbw" id="lMr-FF-SqH"/>
+                        <outlet property="rightBarButton" destination="57u-0P-ns9" id="1e2-bM-LJb"/>
+                        <segue destination="teh-xw-aTK" kind="show" identifier="showContacts" id="qVC-kZ-qum"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AqI-Uh-DIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="965"/>
+        </scene>
+        <!--Add Contact-->
+        <scene sceneID="eg8-du-iQA">
+            <objects>
+                <viewController storyboardIdentifier="contactDetails" title="Add Contact" id="3oL-f8-U3V" customClass="InputViewController" customModule="Code_Test_Michael_Colon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aCp-Et-ps0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ilp-6d-Ztx">
+                                <rect key="frame" x="32" y="126" width="311" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5g9-DN-Xcw"/>
+                                </constraints>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="given-name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Date of birth" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eHO-qA-cnL">
+                                <rect key="frame" x="32" y="486" width="311" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3NS-Qo-huL"/>
+                                </constraints>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <action selector="dobChanged:" destination="3oL-f8-U3V" eventType="editingChanged" id="H1l-Jq-yj6"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WMU-xU-4pY">
+                                <rect key="frame" x="32" y="186" width="311" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5WP-Zl-4pY"/>
+                                </constraints>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="family-name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8lz-SP-I2P">
+                                <rect key="frame" x="32" y="246" width="311" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="unF-tY-Smk"/>
+                                </constraints>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" smartInsertDeleteType="no" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="telephone" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0yN-AW-DS0">
+                                <rect key="frame" x="32" y="306" width="311" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="T9u-V6-eAW"/>
+                                </constraints>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" smartDashesType="yes" smartInsertDeleteType="yes" textContentType="tel"/>
+                                <connections>
+                                    <action selector="phoneFieldChanged:" destination="3oL-f8-U3V" eventType="editingChanged" id="dxY-MW-YCj"/>
+                                    <outlet property="delegate" destination="3oL-f8-U3V" id="suh-SH-h0A"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="street" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zHb-AM-Aoj">
+                                <rect key="frame" x="32" y="366" width="311" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HeK-1l-Wgn"/>
+                                </constraints>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="street-address"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="city" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5Ge-Nw-WR5">
+                                <rect key="frame" x="32" y="426" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6gD-b7-MEh"/>
+                                    <constraint firstAttribute="width" constant="100" id="UqX-ES-oXe"/>
+                                </constraints>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="address-level2"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="state" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MxV-V4-1tG">
+                                <rect key="frame" x="142" y="426" width="53" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="Vso-W5-XgW"/>
+                                    <constraint firstAttribute="height" constant="40" id="bTG-r6-Y0N"/>
+                                </constraints>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" textContentType="address-level1"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="zip" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bT8-iN-jPF">
+                                <rect key="frame" x="205" y="426" width="138" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="J6K-5A-XKm"/>
+                                </constraints>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" smartDashesType="yes" smartInsertDeleteType="yes" textContentType="postal-code"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0t-9O-KLu">
+                                <rect key="frame" x="32" y="615" width="311" height="55"/>
+                                <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="u3p-ZR-2sG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="Add Contact">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="done:" destination="3oL-f8-U3V" eventType="touchUpInside" id="Jlt-2k-Fhv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eHO-qA-cnL" firstAttribute="top" secondItem="5Ge-Nw-WR5" secondAttribute="bottom" constant="20" id="1CG-91-w7D"/>
+                            <constraint firstItem="eHO-qA-cnL" firstAttribute="leading" secondItem="Xyy-rN-uc5" secondAttribute="leading" constant="32" id="4nW-8X-HpS"/>
+                            <constraint firstItem="Xyy-rN-uc5" firstAttribute="trailing" secondItem="H0t-9O-KLu" secondAttribute="trailing" constant="32" id="6IX-Rb-8ml"/>
+                            <constraint firstItem="Xyy-rN-uc5" firstAttribute="bottom" secondItem="H0t-9O-KLu" secondAttribute="bottom" id="DJg-4f-teZ"/>
+                            <constraint firstItem="WMU-xU-4pY" firstAttribute="top" secondItem="Ilp-6d-Ztx" secondAttribute="bottom" constant="20" id="EMD-Q2-1mg"/>
+                            <constraint firstItem="MxV-V4-1tG" firstAttribute="leading" secondItem="5Ge-Nw-WR5" secondAttribute="trailing" constant="10" id="HQZ-ch-zFq"/>
+                            <constraint firstItem="0yN-AW-DS0" firstAttribute="top" secondItem="8lz-SP-I2P" secondAttribute="bottom" constant="20" id="ImB-ZB-w95"/>
+                            <constraint firstItem="Xyy-rN-uc5" firstAttribute="trailing" secondItem="eHO-qA-cnL" secondAttribute="trailing" constant="32" id="KaQ-mo-fGU"/>
+                            <constraint firstItem="bT8-iN-jPF" firstAttribute="top" secondItem="zHb-AM-Aoj" secondAttribute="bottom" constant="20" id="KgE-d4-Lns"/>
+                            <constraint firstItem="Ilp-6d-Ztx" firstAttribute="leading" secondItem="Xyy-rN-uc5" secondAttribute="leading" constant="32" id="KlF-g2-aZW"/>
+                            <constraint firstItem="Xyy-rN-uc5" firstAttribute="trailing" secondItem="bT8-iN-jPF" secondAttribute="trailing" constant="32" id="M7N-Is-fe1"/>
+                            <constraint firstItem="5Ge-Nw-WR5" firstAttribute="top" secondItem="zHb-AM-Aoj" secondAttribute="bottom" constant="20" id="NyM-Zm-UlF"/>
+                            <constraint firstItem="8lz-SP-I2P" firstAttribute="top" secondItem="WMU-xU-4pY" secondAttribute="bottom" constant="20" id="OPg-cI-Q64"/>
+                            <constraint firstItem="zHb-AM-Aoj" firstAttribute="top" secondItem="0yN-AW-DS0" secondAttribute="bottom" constant="20" id="P4z-T8-qaa"/>
+                            <constraint firstItem="MxV-V4-1tG" firstAttribute="top" secondItem="5Ge-Nw-WR5" secondAttribute="top" id="RWF-z8-XFY"/>
+                            <constraint firstItem="Xyy-rN-uc5" firstAttribute="trailing" secondItem="0yN-AW-DS0" secondAttribute="trailing" constant="32" id="UWi-Yy-5wl"/>
+                            <constraint firstItem="H0t-9O-KLu" firstAttribute="leading" secondItem="Xyy-rN-uc5" secondAttribute="leading" constant="32" id="Ugt-c3-ruf"/>
+                            <constraint firstItem="bT8-iN-jPF" firstAttribute="leading" secondItem="MxV-V4-1tG" secondAttribute="trailing" constant="10" id="a1B-gQ-4hX"/>
+                            <constraint firstItem="0yN-AW-DS0" firstAttribute="leading" secondItem="Xyy-rN-uc5" secondAttribute="leading" constant="32" id="a2B-Gp-r5Q"/>
+                            <constraint firstItem="Xyy-rN-uc5" firstAttribute="trailing" secondItem="WMU-xU-4pY" secondAttribute="trailing" constant="32" id="dCF-Zi-fRe"/>
+                            <constraint firstItem="Ilp-6d-Ztx" firstAttribute="top" secondItem="Xyy-rN-uc5" secondAttribute="top" constant="62" id="gJb-vD-N5s"/>
+                            <constraint firstItem="zHb-AM-Aoj" firstAttribute="leading" secondItem="Xyy-rN-uc5" secondAttribute="leading" constant="32" id="nRb-Mn-hcs"/>
+                            <constraint firstItem="8lz-SP-I2P" firstAttribute="leading" secondItem="Xyy-rN-uc5" secondAttribute="leading" constant="32" id="o3B-J3-Xk4"/>
+                            <constraint firstItem="5Ge-Nw-WR5" firstAttribute="leading" secondItem="Xyy-rN-uc5" secondAttribute="leading" constant="32" id="p7q-ii-B1H"/>
+                            <constraint firstItem="Xyy-rN-uc5" firstAttribute="trailing" secondItem="8lz-SP-I2P" secondAttribute="trailing" constant="32" id="qhW-Fa-025"/>
+                            <constraint firstItem="WMU-xU-4pY" firstAttribute="leading" secondItem="Xyy-rN-uc5" secondAttribute="leading" constant="32" id="vYJ-l1-sCQ"/>
+                            <constraint firstItem="Xyy-rN-uc5" firstAttribute="trailing" secondItem="Ilp-6d-Ztx" secondAttribute="trailing" constant="32" id="wVJ-pq-jAO"/>
+                            <constraint firstItem="Xyy-rN-uc5" firstAttribute="trailing" secondItem="zHb-AM-Aoj" secondAttribute="trailing" constant="32" id="ymw-Xb-xYX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xyy-rN-uc5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Contact Details" id="hiK-JG-4Ge">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="q3J-CZ-lba">
+                            <connections>
+                                <action selector="goBack:" destination="3oL-f8-U3V" id="bLI-zu-tmB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Clear" id="Nhy-EY-cnY">
+                            <connections>
+                                <action selector="clear:" destination="3oL-f8-U3V" id="gkj-ni-42i"/>
+                            </connections>
+                        </barButtonItem>
+                        <connections>
+                            <outlet property="leftBarButtonItem" destination="q3J-CZ-lba" id="15x-l5-B1s"/>
+                            <outlet property="rightBarButtonItem" destination="Nhy-EY-cnY" id="s57-ud-9cR"/>
+                        </connections>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <size key="freeformSize" width="375" height="670"/>
+                    <connections>
+                        <outlet property="add" destination="H0t-9O-KLu" id="GI3-9I-EFC"/>
+                        <outlet property="city" destination="5Ge-Nw-WR5" id="nBU-0Y-TTQ"/>
+                        <outlet property="dob" destination="eHO-qA-cnL" id="tCY-mN-49H"/>
+                        <outlet property="email" destination="8lz-SP-I2P" id="aEF-P8-8fF"/>
+                        <outlet property="firstName" destination="Ilp-6d-Ztx" id="Cs8-gY-foF"/>
+                        <outlet property="lastName" destination="WMU-xU-4pY" id="LHS-5p-TOu"/>
+                        <outlet property="phone" destination="0yN-AW-DS0" id="d71-PB-SNk"/>
+                        <outlet property="state" destination="MxV-V4-1tG" id="peK-n4-SMN"/>
+                        <outlet property="street" destination="zHb-AM-Aoj" id="mqh-O4-B0U"/>
+                        <outlet property="zip" destination="bT8-iN-jPF" id="vb9-Y0-gWP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WJo-Qm-50H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1978" y="705"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="contactbook" width="500" height="400"/>
+    </resources>
+</document>

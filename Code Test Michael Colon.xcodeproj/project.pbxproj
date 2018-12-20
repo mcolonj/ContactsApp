@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E39A75021CA00DE0041524C /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39A74F21CA00DE0041524C /* InputViewController.swift */; };
+		3E39A75121CA00DE0041524C /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E39A74F21CA00DE0041524C /* InputViewController.swift */; };
+		3E5A231221C979E600CB178A /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5A231121C979E600CB178A /* ContactsTableViewController.swift */; };
+		3E5A231321C979E600CB178A /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5A231121C979E600CB178A /* ContactsTableViewController.swift */; };
+		3E60761721CADF91008802CF /* coolvetica rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E60761621CADF91008802CF /* coolvetica rg.ttf */; };
+		3E60761821CADF94008802CF /* KeepCalm-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E60761521CADF69008802CF /* KeepCalm-Medium.ttf */; };
+		3E60761D21CADFD2008802CF /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E60761921CADFD1008802CF /* Roboto-Medium.ttf */; };
+		3E60761E21CADFD2008802CF /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E60761A21CADFD1008802CF /* Roboto-Regular.ttf */; };
+		3E60761F21CADFD2008802CF /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E60761B21CADFD2008802CF /* Roboto-Thin.ttf */; };
+		3E60762021CADFD2008802CF /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E60761C21CADFD2008802CF /* Roboto-Light.ttf */; };
+		3E60762221CADFF5008802CF /* GeosansLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E60762121CADFF5008802CF /* GeosansLight.ttf */; };
+		3E60762421CAE00D008802CF /* big_noodle_titling.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E60762321CAE00D008802CF /* big_noodle_titling.ttf */; };
+		3E65AC7F1FF9B78E00625E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90362621C886B4008DCE6B /* AppDelegate.swift */; };
+		3E65AC801FF9BC6600625E12 /* Code_Test_Michael_Colon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3E90362D21C886B4008DCE6B /* Code_Test_Michael_Colon.xcdatamodeld */; };
+		3E65AC811FF9BC6F00625E12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90362821C886B4008DCE6B /* ViewController.swift */; };
+		3E85389921CAFEE50022EB42 /* ContactsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E85389821CAFEE50022EB42 /* ContactsCell.xib */; };
+		3E8538A321CB2DB00022EB42 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8538A221CB2DB00022EB42 /* SectionHeader.swift */; };
 		3E90362721C886B4008DCE6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90362621C886B4008DCE6B /* AppDelegate.swift */; };
 		3E90362921C886B4008DCE6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90362821C886B4008DCE6B /* ViewController.swift */; };
 		3E90362C21C886B4008DCE6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E90362A21C886B4008DCE6B /* Main.storyboard */; };
@@ -14,6 +31,10 @@
 		3E90363121C886B7008DCE6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E90363021C886B7008DCE6B /* Assets.xcassets */; };
 		3E90363421C886B7008DCE6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E90363221C886B7008DCE6B /* LaunchScreen.storyboard */; };
 		3E90363F21C886B7008DCE6B /* Code_Test_Michael_ColonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90363E21C886B7008DCE6B /* Code_Test_Michael_ColonTests.swift */; };
+		3E90364B21C891CE008DCE6B /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90364A21C891CE008DCE6B /* DataStore.swift */; };
+		3E90364C21C891CE008DCE6B /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90364A21C891CE008DCE6B /* DataStore.swift */; };
+		3E90364E21C89B45008DCE6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90364D21C89B45008DCE6B /* Constants.swift */; };
+		3E90364F21C89B45008DCE6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90364D21C89B45008DCE6B /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +48,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E39A74F21CA00DE0041524C /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		3E5A231121C979E600CB178A /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		3E60761521CADF69008802CF /* KeepCalm-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KeepCalm-Medium.ttf"; sourceTree = "<group>"; };
+		3E60761621CADF91008802CF /* coolvetica rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "coolvetica rg.ttf"; sourceTree = "<group>"; };
+		3E60761921CADFD1008802CF /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		3E60761A21CADFD1008802CF /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		3E60761B21CADFD2008802CF /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		3E60761C21CADFD2008802CF /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		3E60762121CADFF5008802CF /* GeosansLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GeosansLight.ttf; sourceTree = "<group>"; };
+		3E60762321CAE00D008802CF /* big_noodle_titling.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_noodle_titling.ttf; sourceTree = "<group>"; };
+		3E85389821CAFEE50022EB42 /* ContactsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsCell.xib; sourceTree = "<group>"; };
+		3E8538A221CB2DB00022EB42 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		3E90362321C886B4008DCE6B /* Code Test Michael Colon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Code Test Michael Colon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E90362621C886B4008DCE6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E90362821C886B4008DCE6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +71,8 @@
 		3E90363A21C886B7008DCE6B /* Code Test Michael ColonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Code Test Michael ColonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E90363E21C886B7008DCE6B /* Code_Test_Michael_ColonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Code_Test_Michael_ColonTests.swift; sourceTree = "<group>"; };
 		3E90364021C886B7008DCE6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E90364A21C891CE008DCE6B /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		3E90364D21C89B45008DCE6B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +93,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E60761421CADF58008802CF /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3E60762321CAE00D008802CF /* big_noodle_titling.ttf */,
+				3E60762121CADFF5008802CF /* GeosansLight.ttf */,
+				3E60761621CADF91008802CF /* coolvetica rg.ttf */,
+				3E60761C21CADFD2008802CF /* Roboto-Light.ttf */,
+				3E60761921CADFD1008802CF /* Roboto-Medium.ttf */,
+				3E60761A21CADFD1008802CF /* Roboto-Regular.ttf */,
+				3E60761B21CADFD2008802CF /* Roboto-Thin.ttf */,
+				3E60761521CADF69008802CF /* KeepCalm-Medium.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		3E8538A621CB45770022EB42 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3E39A74F21CA00DE0041524C /* InputViewController.swift */,
+				3E5A231121C979E600CB178A /* ContactsTableViewController.swift */,
+				3E90362821C886B4008DCE6B /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3E8538A721CB45920022EB42 /* HeaderViews */ = {
+			isa = PBXGroup;
+			children = (
+				3E8538A221CB2DB00022EB42 /* SectionHeader.swift */,
+			);
+			name = HeaderViews;
+			sourceTree = "<group>";
+		};
+		3E8538A821CB45A30022EB42 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				3E85389821CAFEE50022EB42 /* ContactsCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		3E8538AA21CB45CB0022EB42 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3E90363221C886B7008DCE6B /* LaunchScreen.storyboard */,
+				3E90362A21C886B4008DCE6B /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		3E90361A21C886B4008DCE6B = {
 			isa = PBXGroup;
 			children = (
@@ -79,13 +164,16 @@
 		3E90362521C886B4008DCE6B /* Code Test Michael Colon */ = {
 			isa = PBXGroup;
 			children = (
+				3E60761421CADF58008802CF /* fonts */,
+				3E8538AA21CB45CB0022EB42 /* Storyboards */,
+				3E8538A821CB45A30022EB42 /* TableViewCells */,
+				3E8538A721CB45920022EB42 /* HeaderViews */,
+				3E8538A621CB45770022EB42 /* ViewControllers */,
+				3E90364921C89186008DCE6B /* Utilities */,
 				3E90362621C886B4008DCE6B /* AppDelegate.swift */,
-				3E90362821C886B4008DCE6B /* ViewController.swift */,
-				3E90362A21C886B4008DCE6B /* Main.storyboard */,
-				3E90363021C886B7008DCE6B /* Assets.xcassets */,
-				3E90363221C886B7008DCE6B /* LaunchScreen.storyboard */,
-				3E90363521C886B7008DCE6B /* Info.plist */,
 				3E90362D21C886B4008DCE6B /* Code_Test_Michael_Colon.xcdatamodeld */,
+				3E90363021C886B7008DCE6B /* Assets.xcassets */,
+				3E90363521C886B7008DCE6B /* Info.plist */,
 			);
 			path = "Code Test Michael Colon";
 			sourceTree = "<group>";
@@ -97,6 +185,15 @@
 				3E90364021C886B7008DCE6B /* Info.plist */,
 			);
 			path = "Code Test Michael ColonTests";
+			sourceTree = "<group>";
+		};
+		3E90364921C89186008DCE6B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3E90364A21C891CE008DCE6B /* DataStore.swift */,
+				3E90364D21C89B45008DCE6B /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +277,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E85389921CAFEE50022EB42 /* ContactsCell.xib in Resources */,
+				3E60762421CAE00D008802CF /* big_noodle_titling.ttf in Resources */,
+				3E60761F21CADFD2008802CF /* Roboto-Thin.ttf in Resources */,
 				3E90363421C886B7008DCE6B /* LaunchScreen.storyboard in Resources */,
+				3E60762221CADFF5008802CF /* GeosansLight.ttf in Resources */,
+				3E60761E21CADFD2008802CF /* Roboto-Regular.ttf in Resources */,
 				3E90363121C886B7008DCE6B /* Assets.xcassets in Resources */,
+				3E60761D21CADFD2008802CF /* Roboto-Medium.ttf in Resources */,
+				3E60761821CADF94008802CF /* KeepCalm-Medium.ttf in Resources */,
 				3E90362C21C886B4008DCE6B /* Main.storyboard in Resources */,
+				3E60761721CADF91008802CF /* coolvetica rg.ttf in Resources */,
+				3E60762021CADFD2008802CF /* Roboto-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E90364E21C89B45008DCE6B /* Constants.swift in Sources */,
 				3E90362921C886B4008DCE6B /* ViewController.swift in Sources */,
+				3E5A231221C979E600CB178A /* ContactsTableViewController.swift in Sources */,
+				3E39A75021CA00DE0041524C /* InputViewController.swift in Sources */,
+				3E8538A321CB2DB00022EB42 /* SectionHeader.swift in Sources */,
+				3E90364B21C891CE008DCE6B /* DataStore.swift in Sources */,
 				3E90362F21C886B4008DCE6B /* Code_Test_Michael_Colon.xcdatamodeld in Sources */,
 				3E90362721C886B4008DCE6B /* AppDelegate.swift in Sources */,
 			);
@@ -210,7 +321,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E39A75121CA00DE0041524C /* InputViewController.swift in Sources */,
+				3E65AC7F1FF9B78E00625E12 /* AppDelegate.swift in Sources */,
 				3E90363F21C886B7008DCE6B /* Code_Test_Michael_ColonTests.swift in Sources */,
+				3E90364C21C891CE008DCE6B /* DataStore.swift in Sources */,
+				3E5A231321C979E600CB178A /* ContactsTableViewController.swift in Sources */,
+				3E65AC811FF9BC6F00625E12 /* ViewController.swift in Sources */,
+				3E65AC801FF9BC6600625E12 /* Code_Test_Michael_Colon.xcdatamodeld in Sources */,
+				3E90364F21C89B45008DCE6B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +482,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Code Test Michael Colon/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -372,6 +492,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "michaelcolon.Code-Test-Michael-Colon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -381,7 +502,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Code Test Michael Colon/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -389,6 +512,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "michaelcolon.Code-Test-Michael-Colon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
