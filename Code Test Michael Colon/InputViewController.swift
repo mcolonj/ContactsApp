@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InputViewController: UIViewController, UITextFieldDelegate {
+class InputViewController: UIViewController {
     
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
@@ -20,6 +20,9 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var zip: UITextField!
     @IBOutlet weak var dob: UITextField!
     @IBOutlet weak var add: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    var activeField: UITextField?
     
     let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -40,6 +43,12 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        styleTextFields()
+        addTapGestureRecognizer()
+        addObservers()
+    }
+    
+    func styleTextFields() {
         makeLineAtBotton(field: firstName)
         makeLineAtBotton(field: lastName)
         makeLineAtBotton(field: email)
@@ -50,6 +59,16 @@ class InputViewController: UIViewController, UITextFieldDelegate {
         makeLineAtBotton(field: zip)
         makeLineAtBotton(field: dob)
         add.layer.cornerRadius = add.frame.size.height * 0.1
+    }
+    
+    func addTapGestureRecognizer() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     func fillForm(withContact contact: Contacts) {
@@ -90,51 +109,6 @@ class InputViewController: UIViewController, UITextFieldDelegate {
         
     }
 
-    func makeOnlyDigitString(string: String) -> String {
-        return string.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined(separator: "")
-    }
-    
-    @IBAction func dobChanged(_ sender: UITextField) {
-        sender.text = dobFieldFormat(string: sender.text ?? "")
-    }
-    
-    func dobFieldFormat(string: String) -> String {
-        let digits = makeOnlyDigitString(string: string)
-        let format = "**/**/****"
-        var formatted = ""
-        var index = digits.startIndex
-        for character in format {
-            if index == digits.endIndex { break }
-            if character == "*" {
-                formatted.append(digits[index])
-                index = digits.index(after: index)
-            } else {
-                formatted.append(character)
-            }
-        }
-        return formatted
-    }
-    
-    @IBAction func phoneFieldChanged(_ sender: UITextField) {
-        sender.text = phoneFieldFormat(string: sender.text ?? "")
-    }
-    
-    func phoneFieldFormat(string: String) -> String {
-        let digits = makeOnlyDigitString(string: string)
-        let format = "(***) ***-****"
-        var formatted = ""
-        var index = digits.startIndex
-        for character in format {
-            if index == digits.endIndex { break }
-            if character == "*" {
-                formatted.append(digits[index])
-                index = digits.index(after: index)
-            } else {
-                formatted.append(character)
-            }
-        }
-        return formatted
-    }
     
     @IBAction func clear(_ sender: Any) {
     
@@ -231,5 +205,114 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func goBack(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+    }
+}
+
+extension InputViewController: UITextFieldDelegate {
+    
+    @IBAction func dobChanged(_ sender: UITextField) {
+        sender.text = dobFieldFormat(string: sender.text ?? "")
+    }
+    
+    @IBAction func phoneFieldChanged(_ sender: UITextField) {
+        sender.text = phoneFieldFormat(string: sender.text ?? "")
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        activeField = textField
+        return true
+    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        NotificationCenter.default.post(name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        activeField = nil
+        UIView.animate(withDuration: 0.1) {
+            self.scrollView.contentOffset = CGPoint(x:0,y:0)
+        }
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func makeOnlyDigitString(string: String) -> String {
+        return string.components(separatedBy: NSCharacterSet.decimalDigits.inverted).joined(separator: "")
+    }
+    
+    func dobFieldFormat(string: String) -> String {
+        let digits = makeOnlyDigitString(string: string)
+        let format = "**/**/****"
+        var formatted = ""
+        var index = digits.startIndex
+        for character in format {
+            if index == digits.endIndex { break }
+            if character == "*" {
+                formatted.append(digits[index])
+                index = digits.index(after: index)
+            } else {
+                formatted.append(character)
+            }
+        }
+        return formatted
+    }
+    
+    
+    
+    func phoneFieldFormat(string: String) -> String {
+        let digits = makeOnlyDigitString(string: string)
+        let format = "(***) ***-****"
+        var formatted = ""
+        var index = digits.startIndex
+        for character in format {
+            if index == digits.endIndex { break }
+            if character == "*" {
+                formatted.append(digits[index])
+                index = digits.index(after: index)
+            } else {
+                formatted.append(character)
+            }
+        }
+        return formatted
+    }
+    
+    @objc func dismissKeyboard() {
+        UIView.animate(withDuration: 0.1) {
+            self.scrollView.contentOffset = CGPoint(x: 0, y: 0)
+        }
+        view.endEditing(true)
+    }
+    
+    
+    @objc func handleKeyboard(notification: Notification) {
+        
+        if let info = notification.userInfo {
+            
+            
+            guard let screenEnd = (info[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+                print("keyboard handle error")
+                return
+            }
+            
+            let viewEnd = view.convert(screenEnd, from: view.window)
+            
+            if let activeField = activeField {
+                var point: CGPoint = activeField.frame.origin
+                point.y += activeField.frame.size.height + 20
+                if(viewEnd.contains(point)) {
+                    UIView.animate(withDuration: 0.1) {
+                        self.scrollView.contentOffset = CGPoint(x: 0, y: 100)
+                    }
+                    
+                } else {
+                    UIView.animate(withDuration: 0.1) {
+                        self.scrollView.contentOffset = CGPoint(x: 0, y: 0)
+                    }
+                    
+                }
+            }
+        }
+        
+        
+        
     }
 }

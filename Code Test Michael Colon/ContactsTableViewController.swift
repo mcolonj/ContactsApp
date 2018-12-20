@@ -67,6 +67,7 @@ class ContactCell: UITableViewCell {
 class ContactsTableViewController: UIViewController {
     
     @IBOutlet weak var add: UIBarButtonItem!
+    @IBOutlet weak var refresh: UIBarButtonItem!
     
     // Controls
     let searchController: UISearchController = UISearchController(searchResultsController: nil)
@@ -152,7 +153,7 @@ class ContactsTableViewController: UIViewController {
         
     }
     
-    @objc func refreshContacts(_ sender: Any) {
+    @IBAction func refreshButtonPressed() {
         activityIndicator.startAnimating()
         activityIndicator.isHidden = false
         contactsUpdated()
@@ -161,6 +162,10 @@ class ContactsTableViewController: UIViewController {
             self.activityIndicator.stopAnimating()
             self.activityIndicator.isHidden = true
         }
+    }
+    
+    @objc func refreshContacts(_ sender: Any) {
+        refreshButtonPressed()
     }
     
     
