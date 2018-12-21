@@ -30,6 +30,18 @@ class InputViewController: UIViewController {
         return formatter
     }()
     
+    let phoneNumberAlert: UIAlertController = {
+        let alert = UIAlertController(title: "Please enter a phone number.", message: "One phone number is required.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        return alert
+    }()
+    
+    let emailAlert: UIAlertController = {
+        let alert = UIAlertController(title: "Please enter an email.", message: "At least one email is required.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        return alert
+    }()
+    
     var forUpdating: Bool = false
     var contact: Contacts?
     
@@ -160,7 +172,7 @@ class InputViewController: UIViewController {
     }
     
     @IBAction func done(_ sender: Any) {
-        
+        if !hasRequiredFields() { return }
         if forUpdating {
             if let contact = contact {
                 if let person = contact.person {
@@ -203,9 +215,25 @@ class InputViewController: UIViewController {
         }
     }
     
+    func hasRequiredFields() -> Bool {
+        if let emptiness = email.text?.isEmpty, emptiness == true {
+            self.present(emailAlert, animated: true) {
+               
+            }
+            return false
+        } else if let emptiness = phone.text?.isEmpty, emptiness == true {
+            self.present(phoneNumberAlert, animated: true) {
+                
+            }
+            return false
+        }
+        return true
+    }
+    
     @IBAction func goBack(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
+    
 }
 
 extension InputViewController: UITextFieldDelegate {
